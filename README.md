@@ -72,9 +72,6 @@ playwright install
 编辑 `config.txt` 文件，设置相关参数（简单键值对格式）：
 
 ```
-# 是否使用AI助手（布尔值：True/False）
-ASK_AI = False
-
 # Linux Studio平台的用户名
 USER_NAME = "用户名"
 
@@ -97,29 +94,6 @@ python main.py
 - `courses_data.json`：完整的课程列表数据
 - 若程序执行过程中出现课程学习错误，会生成 `debug_course_*.html` 文件用于调试
 
-## 示例代码
-
-### 基本使用
-
-```bash
-# 直接运行主程序
-python main.py
-```
-
-### 自定义配置
-
-```bash
-# 修改 config.txt 文件中的参数
-# 例如：启用AI助手
-ASK_AI = True
-
-# 设置实际的用户名和密码
-USER_NAME = "your_actual_username"
-PASSWORD = "your_actual_password"
-
-# 然后运行程序
-python main.py
-```
 
 ## 项目结构
 
