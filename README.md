@@ -31,8 +31,8 @@ LinuxClass 是一个用于自动化学习 Linux Studio 平台课程的工具，�
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/your-username/linuxclass-auto.git
-   cd linuxclass-auto
+   git clone https://github.com/your-username/linuxclass_quick_done.git
+   cd linuxclass_quick_done
    ```
 
 2. **创建虚拟环境**
@@ -64,16 +64,17 @@ LinuxClass 是一个用于自动化学习 Linux Studio 平台课程的工具，�
 
 ### 1. 配置文件设置
 
-编辑 `config.txt` 文件，设置相关参数：
+编辑 `config.txt` 文件，设置相关参数（简单键值对格式）：
 
-```ini
-[DEFAULT]
-# 学习课程列表，多个课程用逗号分隔
-COURSE_LIST = introduction,bioinfo
-# 学习时间间隔（秒）
-LEARN_INTERVAL = 5
-# 学习模式：normal 或 fast
-LEARN_MODE = normal
+```
+# 是否使用AI助手（布尔值：True/False）
+ASK_AI = False
+
+# Linux Studio平台的用户名
+USER_NAME = "用户名"
+
+# Linux Studio平台的密码
+PASSWORD = "密码"
 ```
 
 ### 2. 运行程序
@@ -84,26 +85,31 @@ python main.py
 
 ### 3. 查看结果
 
-程序执行完成后，在 `output` 目录中查看生成的文件：
+程序执行完成后，会自动创建 `output` 目录，并在其中生成以下文件：
 - `completed_courses.json`：JSON 格式的已完成课程数据
 - `completed_courses.csv`：CSV 格式的已完成课程数据
 - `courses_data.json`：完整的课程列表数据
+- 若程序执行过程中出现课程学习错误，会生成 `debug_course_*.html` 文件用于调试
 
 ## 示例代码
 
 ### 基本使用
 
-```python
+```bash
 # 直接运行主程序
 python main.py
 ```
 
 ### 自定义配置
 
-```python
+```bash
 # 修改 config.txt 文件中的参数
-# 例如：设置学习间隔为 10 秒
-LEARN_INTERVAL = 10
+# 例如：启用AI助手
+ASK_AI = True
+
+# 设置实际的用户名和密码
+USER_NAME = "your_actual_username"
+PASSWORD = "your_actual_password"
 
 # 然后运行程序
 python main.py
@@ -112,14 +118,15 @@ python main.py
 ## 项目结构
 
 ```
-linuxclass-auto/
-├── config.txt           # 配置文件，用于设置学习参数
-├── course_content_extractor.py  # 课程内容提取模块
-├── course_scraper.py    # 课程爬取模块
-├── main.py              # 主程序入口
-├── output/              # 输出目录，存放生成的文件
-├── requirements.txt     # 依赖包列表
-└── README.md            # 项目说明文档
+linuxclass_quick_done/
+├── config.txt                    # 配置文件，用于设置学习参数
+├── course_content_extractor.py   # 课程内容提取模块
+├── course_scraper.py             # 课程爬取模块
+├── main.py                       # 主程序入口
+├── output/                       # 输出目录（自动创建），存放生成的文件
+├── requirements.txt              # 依赖包列表
+├── LICENSE                       # 许可证文件
+└── README.md                     # 项目说明文档
 ```
 
 ## 关键文件解释
@@ -127,10 +134,11 @@ linuxclass-auto/
 | 文件名 | 功能描述 |
 |--------|----------|
 | `main.py` | 程序主入口，负责加载配置、初始化模块和执行学习流程 |
-| `course_content_extractor.py` | 提取课程内容和相关信息 |
-| `course_scraper.py` | 爬取课程数据并记录学习进度 |
-| `config.txt` | 配置文件，用于自定义学习参数 |
-| `requirements.txt` | 项目依赖包列表 |
+| `course_content_extractor.py` | 从Linux Studio平台提取课程内容和相关信息 |
+| `course_scraper.py` | 爬取课程数据、记录学习进度并保存结果 |
+| `config.txt` | 配置文件，用于设置用户名、密码和AI助手开关等参数 |
+| `requirements.txt` | 项目依赖包列表，包含所有必需的Python库 |
+| `LICENSE` | MIT许可证文件，定义项目的使用权限 |
 
 ## 贡献指南
 
@@ -157,9 +165,9 @@ linuxclass-auto/
 
 如果您在使用过程中遇到问题或有改进建议，欢迎通过以下方式反馈：
 
-- **GitHub Issues**：[提交 Issue](https://github.com/your-username/linuxclass-auto/issues)
+- **GitHub Issues**：[提交 Issue](https://github.com/your-username/linuxclass_quick_done/issues)
 - **电子邮件**：your-email@example.com
-- **项目地址**：https://github.com/your-username/linuxclass-auto
+- **项目地址**：https://github.com/your-username/linuxclass_quick_done
 
 ## 更新日志
 
