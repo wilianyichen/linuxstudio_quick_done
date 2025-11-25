@@ -23,42 +23,47 @@ LinuxClass 是一个用于自动化学习 Linux Studio 平台课程的工具，�
 
 ## 环境要求
 
-- Python 3.8+ 
+- Python 3.8+
 - Git（用于版本控制）
 - 网络连接（用于访问 Linux Studio 平台）
 
 ## 安装步骤
 
-1. **克隆仓库**
-   ```bash
-   git clone https://github.com/wilianyichen/linuxstudio_quick_done.git
-   cd linuxstudio_quick_done
-   ```
+### 1. 克隆仓库
 
-2. **创建虚拟环境**
-   ```bash
-   python -m venv venv
-   ```
+```bash
+git clone https://github.com/wilianyichen/linuxstudio_quick_done.git
+cd linuxstudio_quick_done
+```
 
-3. **激活虚拟环境**
-   - Windows：
-     ```bash
-     venv\Scripts\activate
-     ```
-   - Linux/macOS：
-     ```bash
-     source venv/bin/activate
-     ```
+### 2. 创建虚拟环境
 
-4. **安装依赖包**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+python -m venv venv
+```
 
-5. **配置 Playwright 浏览器驱动**
-   ```bash
-   playwright install
-   ```
+### 3. 激活虚拟环境
+
+- **Windows**：
+  ```bash
+  venv\Scripts\activate
+  ```
+- **Linux/macOS**：
+  ```bash
+  source venv/bin/activate
+  ```
+
+### 4. 安装依赖包
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. 配置 Playwright 浏览器驱动
+
+```bash
+playwright install
+```
 
 ## 使用说明
 
@@ -86,6 +91,7 @@ python main.py
 ### 3. 查看结果
 
 程序执行完成后，会自动创建 `output` 目录，并在其中生成以下文件：
+
 - `completed_courses.json`：JSON 格式的已完成课程数据
 - `completed_courses.csv`：CSV 格式的已完成课程数据
 - `courses_data.json`：完整的课程列表数据
@@ -131,14 +137,14 @@ linuxstudio_quick_done/
 
 ## 关键文件解释
 
-| 文件名 | 功能描述 |
-|--------|----------|
-| `main.py` | 程序主入口，负责加载配置、初始化模块和执行学习流程 |
-| `course_content_extractor.py` | 从Linux Studio平台提取课程内容和相关信息 |
-| `course_scraper.py` | 爬取课程数据、记录学习进度并保存结果 |
-| `config.txt` | 配置文件，用于设置用户名、密码和AI助手开关等参数 |
-| `requirements.txt` | 项目依赖包列表，包含所有必需的Python库 |
-| `LICENSE` | MIT许可证文件，定义项目的使用权限 |
+| 文件名                          | 功能描述                                           |
+| ------------------------------- | -------------------------------------------------- |
+| `main.py`                       | 程序主入口，负责加载配置、初始化模块和执行学习流程 |
+| `course_content_extractor.py`   | 从Linux Studio平台提取课程内容和相关信息           |
+| `course_scraper.py`             | 爬取课程数据、记录学习进度并保存结果               |
+| `config.txt`                    | 配置文件，用于设置用户名、密码和AI助手开关等参数   |
+| `requirements.txt`              | 项目依赖包列表，包含所有必需的Python库             |
+| `LICENSE`                       | MIT许可证文件，定义项目的使用权限                  |
 
 ## 贡献指南
 
@@ -166,18 +172,18 @@ linuxstudio_quick_done/
 如果您在使用过程中遇到问题或有改进建议，欢迎通过以下方式反馈：
 
 - **GitHub Issues**：[提交 Issue](https://github.com/wilianyichen/linuxstudio_quick_done/issues)
-- **电子邮件**：your-email@example.com
+- **电子邮件**：921229543@qq.com
 - **项目地址**：https://github.com/wilianyichen/linuxstudio_quick_done
 
 ## 更新日志
 
-### v1.0.0（2025-11-24）
+### v1.0.0 (2025-11-24)
 
-- 初始版本发布
-- 实现课程自动提取和爬取功能
-- 支持 JSON 和 CSV 格式输出
-- 完善的配置选项
-- 自动创建输出目录
+- ✨ 初始版本发布
+- 📚 实现课程自动提取和爬取功能
+- 📊 支持 JSON 和 CSV 格式输出
+- ⚙️ 完善的配置选项
+- 📁 自动创建输出目录
 
 ## 致谢
 

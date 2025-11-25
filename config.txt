@@ -1,5 +1,3 @@
-ASK_AI = False
-
 USER_NAME = "用户名"
 PASSWORD = "密码"
 
