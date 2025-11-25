@@ -1,0 +1,5 @@
+ASK_AI = False
+
+USER_NAME = "陈思彤"
+PASSWORD = "cstzyq172"
+
