@@ -31,8 +31,8 @@ LinuxClass 是一个用于自动化学习 Linux Studio 平台课程的工具，�
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/your-username/linuxclass_quick_done.git
-   cd linuxclass_quick_done
+   git clone https://github.com/wilianyichen/linuxstudio_quick_done.git
+   cd linuxstudio_quick_done
    ```
 
 2. **创建虚拟环境**
@@ -118,7 +118,7 @@ python main.py
 ## 项目结构
 
 ```
-linuxclass_quick_done/
+linuxstudio_quick_done/
 ├── config.txt                    # 配置文件，用于设置学习参数
 ├── course_content_extractor.py   # 课程内容提取模块
 ├── course_scraper.py             # 课程爬取模块
@@ -165,9 +165,9 @@ linuxclass_quick_done/
 
 如果您在使用过程中遇到问题或有改进建议，欢迎通过以下方式反馈：
 
-- **GitHub Issues**：[提交 Issue](https://github.com/your-username/linuxclass_quick_done/issues)
+- **GitHub Issues**：[提交 Issue](https://github.com/wilianyichen/linuxstudio_quick_done/issues)
 - **电子邮件**：your-email@example.com
-- **项目地址**：https://github.com/your-username/linuxclass_quick_done
+- **项目地址**：https://github.com/wilianyichen/linuxstudio_quick_done
 
 ## 更新日志
 
